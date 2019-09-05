@@ -70,4 +70,20 @@ srv-host={{ host.name }}{% if host.target is defined %},{{ host.target }}{% endi
 {% endfor %}
 {% endif %}
 
+{% if dnsmasq_log_queries %}
+log-queries
+{% endif %}
+
+{% if dnsmasq_log_dhcp %}
+log-dhcp
+{% endif %}
+
+{% if dnsmasq_bind_interfaces %}
+bind-interfaces
+{% endif %}
+
+{% if dnsmasq_except_interface is defined %}
+except-interface={{ dnsmasq_except_interface }}
+{% endif %}
+
 conf-dir=/etc/dnsmasq.d

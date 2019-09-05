@@ -4,3 +4,6 @@ dnsmasq_domain_needed: false
 dnsmasq_bogus_priv: true
 dnsmasq_authoritative: false
 dnsmasq_expand_hosts: false
+dnsmasq_log_queries: false
+dnsmasq_log_dhcp: false
+dnsmasq_bind_interfaces: false

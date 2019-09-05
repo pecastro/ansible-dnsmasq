@@ -20,8 +20,8 @@ None of the variables below are required.
 | `dnsmasq_addn_hosts`       | -       | Set this to specify a custom host file that should be read in addition to `/etc/hosts`.                                                                   |
 | `dnsmasq_authoritative`    | `false` | When `true`, dnsmasq will function as an authoritative name server.                                                                                       |
 | `dnsmasq_bogus_priv`       | `true`  | When `true`, Dnsmasq will not forward addresses in the non-routed address spaces.                                                                         |
-| `dnsmasq_dhcp_hosts`       | -       | Array of hashes specifying IP address reservations for hosts, with keys `name` (optional), `mac` and `ip` for each reservation. See below.             |
-| `dnsmasq_dhcp_ranges`      | -       | Array of hashes specifying DHCP ranges (with keys `start_addr`, `end_addr`, and `lease_time`) for each address pool. This also enables DHCP. See below. |
+| `dnsmasq_dhcp_hosts`       | -       | Array of hashes specifying IP address reservations for hosts, with keys `name` (optional), `mac` and `ip` for each reservation. See below.                |
+| `dnsmasq_dhcp_ranges`      | -       | Array of hashes specifying DHCP ranges (with keys `start_addr`, `end_addr`, and `lease_time`) for each address pool. This also enables DHCP. See below.   |
 | `dnsmasq_domain_needed`    | `true`  | When `true`, local requests (i.e. without domain name) are not forwarded.                                                                                 |
 | `dnsmasq_domain`           | -       | The domain for Dnsmasq.                                                                                                                                   |
 | `dnsmasq_expand_hosts`     | `false` | Set this (and `dnsmasq_domain`) if you want to have a domain automatically added to simple names in a hosts-file.                                         |
@@ -30,8 +30,12 @@ None of the variables below are required.
 | `dnsmasq_option_router`    | -       | The default gateway to be sent to clients.                                                                                                                |
 | `dnsmasq_port`             | -       | Set this to listen on a custom port.                                                                                                                      |
 | `dnsmasq_resolv_file`      | -       | Set this to specify a custom `resolv.conf` file.                                                                                                          |
-| `dnsmasq_upstream_servers` | -       | Set this to specify the IP address of upstream DNS servers directly. You can specify one ore more servers as a list.                                    |
-| `dnsmasq_srv_hosts`        | -       | Array of hashes specifying SRV records, with keys `name` (mandatory), `target`, `port`, `priority` and `weight` for each record. See below.              |
+| `dnsmasq_upstream_servers` | -       | Set this to specify the IP address of upstream DNS servers directly. You can specify one ore more servers as a list.                                      |
+| `dnsmasq_srv_hosts`        | -       | Array of hashes specifying SRV records, with keys `name` (mandatory), `target`, `port`, `priority` and `weight` for each record. See below.               |
+| `dnsmasq_log_queries`      | `false` | When `true` will log DNS queries                                                                                                                          |
+| `dnsmasq_log_dhcp`         | `false` | When `true` will log DHCP requests                                                                                                                        |
+| `dnsmasq_bind_interfaces`  | `false` | Really bind to the interfaces listening on. Useful when running another nameserver on the same machine.                                                   |
+| `dnsmasq_except_interface` | -       | Interface not to listen on                                                                                                                                |
 
 ### DNS settings
 
@@ -154,3 +158,4 @@ Licensed under the 2-clause "Simplified BSD License". See [LICENSE.md](/LICENSE.
 - [Chris James](https://github.com/etcet)
 - [David Wittman](https://github.com/DavidWittman)
 - [Niklas Juslin](https://github.com/JZfi)
+- [Paulo Castro](https://github.com/pecastro)

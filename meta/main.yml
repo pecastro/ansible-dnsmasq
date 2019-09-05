@@ -18,6 +18,7 @@ galaxy_info:
         - 21
         - 22
         - 23
+        - 30
   galaxy_tags:
     - networking
     - bind
