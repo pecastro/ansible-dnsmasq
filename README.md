@@ -28,6 +28,7 @@ None of the variables below are required.
 | `dnsmasq_listen_address`   | -       | The IP address of the interface that should listen to DNS/DHCP requests.                                                                                  |
 | `dnsmasq_interface`        | -       | The network interface that should listen to DNS/DHCP requests.                                                                                            |
 | `dnsmasq_option_router`    | -       | The default gateway to be sent to clients.                                                                                                                |
+| `dnsmasq_generic_option`   | -       | Generic way of passing DHCP OPTION values to clients.                                                                                                     |
 | `dnsmasq_port`             | -       | Set this to listen on a custom port.                                                                                                                      |
 | `dnsmasq_resolv_file`      | -       | Set this to specify a custom `resolv.conf` file.                                                                                                          |
 | `dnsmasq_upstream_servers` | -       | Set this to specify the IP address of upstream DNS servers directly. You can specify one ore more servers as a list.                                      |
